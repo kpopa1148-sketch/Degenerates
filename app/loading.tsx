@@ -1,0 +1,1 @@
+export default function Loading() { return <div className="mx-auto max-w-7xl p-8 grid gap-4 md:grid-cols-3">{Array.from({ length: 6 }).map((_, i) => <div key={i} className="h-48 animate-pulse rounded-card bg-white/5" />)}</div>; }

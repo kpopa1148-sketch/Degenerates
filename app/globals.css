@@ -1,0 +1,13 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html{background:#050507;color:#fff;scroll-behavior:smooth}
+body{min-height:100vh;overflow-x:hidden;background:radial-gradient(60rem 40rem at 50% -10%,rgba(139,61,255,.18),transparent),#050507}
+.glass{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(14px)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;border-radius:999px;font-weight:700;letter-spacing:.05em;transition:.25s;background:#8b3dff;color:#fff}
+.btn:hover{background:#a86bff;box-shadow:0 0 40px -8px #8b3dff;transform:translateY(-1px)}
+.btn:disabled{opacity:.5;pointer-events:none}.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.2)}
+.title{font-family:Impact,Haettenschweiler,sans-serif;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+.gold-text{background:linear-gradient(180deg,#fff2c4,#f5c451 60%,#b8862b);-webkit-background-clip:text;color:transparent}
+:focus-visible{outline:2px solid #f5c451;outline-offset:2px}
+@keyframes float{50%{transform:translateY(-14px)}}.float{animation:float 5s ease-in-out infinite}
+@keyframes drift{to{transform:translateY(-110vh)}}.spark{position:absolute;bottom:-10px;width:3px;height:3px;border-radius:50%;background:#f5c451;box-shadow:0 0 8px #f5c451;animation:drift linear infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
