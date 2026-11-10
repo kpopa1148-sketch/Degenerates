@@ -50,3 +50,6 @@ table{display:block;overflow-x:auto}
 @media (hover:none){
   .btn:hover{transform:none;box-shadow:none}
 }
+@keyframes scare{0%{transform:scale(.2);opacity:0}15%{transform:scale(1.15);opacity:1}100%{transform:scale(1)}}
+@keyframes shake{0%,100%{transform:translate(0)}20%{transform:translate(-8px,6px)}40%{transform:translate(8px,-6px)}60%{transform:translate(-6px,-8px)}80%{transform:translate(6px,8px)}}
+.scare{animation:scare .25s ease-out forwards,shake .12s linear .25s 10}
