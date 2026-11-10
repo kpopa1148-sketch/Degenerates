@@ -11,3 +11,42 @@ body{min-height:100vh;overflow-x:hidden;background:radial-gradient(60rem 40rem a
 @keyframes float{50%{transform:translateY(-14px)}}.float{animation:float 5s ease-in-out infinite}
 @keyframes drift{to{transform:translateY(-110vh)}}.spark{position:absolute;bottom:-10px;width:3px;height:3px;border-radius:50%;background:#f5c451;box-shadow:0 0 8px #f5c451;animation:drift linear infinite}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* ===== Адаптация под телефоны и планшеты ===== */
+img{max-width:100%;height:auto}
+button,a,input,textarea{-webkit-tap-highlight-color:transparent}
+input,textarea{font-size:16px} /* iOS не будет приближать страницу при вводе */
+table{display:block;overflow-x:auto}
+
+/* телефоны */
+@media (max-width:640px){
+  .text-9xl{font-size:5rem!important}
+  .text-8xl{font-size:3.5rem!important}
+  .text-7xl{font-size:2.6rem!important}
+  .text-6xl{font-size:2.2rem!important}
+  .text-5xl{font-size:1.9rem!important}
+  .text-4xl{font-size:1.6rem!important}
+  .text-3xl{font-size:1.4rem!important}
+  .py-24{padding-top:3rem!important;padding-bottom:3rem!important}
+  .py-12{padding-top:1.5rem!important;padding-bottom:1.5rem!important}
+  .mt-24{margin-top:3.5rem!important}
+  .p-5{padding:1rem!important}
+  .p-6{padding:1.1rem!important}
+  .btn{padding:.8rem 1.2rem;min-height:44px;justify-content:center}
+  section.min-h-\[90vh\]{min-height:auto!important;padding-top:3rem;padding-bottom:3rem}
+  [aria-label="Обратный отсчёт"]{flex-wrap:wrap;justify-content:center;gap:.5rem}
+  [aria-label="Обратный отсчёт"]>div{width:4.2rem!important;padding:.6rem 0!important}
+  [aria-label="Обратный отсчёт"] .title{font-size:1.5rem!important}
+  [role="status"]{left:1rem;right:1rem;bottom:1rem}
+  [role="dialog"] form{max-height:90vh;overflow:auto}
+}
+
+/* планшеты */
+@media (min-width:641px) and (max-width:1023px){
+  .text-9xl{font-size:7rem!important}
+  .text-7xl{font-size:3.5rem!important}
+}
+
+/* hover-эффекты только там, где есть мышь */
+@media (hover:none){
+  .btn:hover{transform:none;box-shadow:none}
+}
